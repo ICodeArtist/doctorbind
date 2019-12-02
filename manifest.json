@@ -77,13 +77,13 @@
             "maps" : {}
         },
         "router" : {
-            "base" : "",
+            "base" : "/doctor/",
             "mode" : "history"
         },
         "devServer" : {
             "https" : false,
             "disableHostCheck" : true
         },
-        "domain" : "doctor.wxori.top"
+        "domain" : "gz.cloudhos.net"
     }
 }
