@@ -40,7 +40,7 @@
 			}
 		},
 		onShow() {
-			let appid = "wx236bc250708f2a2f"; //为测试号id
+			let appid = "wx9970965c3f3a5ba3"; //为测试号id
 			let code = getUrlParam("code"); //是否存在code
 			let _this = this;
 			console.log(code);
@@ -51,7 +51,7 @@
 			} else {
 				//存在则通过code传向后台调用接口返回微信的个人信息
 				graceRequest.get(
-					'https://askapp.wxori.top/wx/getWXinfo',
+					'https://askapp.cloudhos.net/wx/getWXinfo',
 					{code:code},
 					function(res){
 						if(res.code == '0'){
@@ -75,7 +75,7 @@
 						formData.openid = this.openid
 						console.log(formData);
 						graceRequest.post(
-							'https://askapp.wxori.top/wechat/doctorbind',
+							'https://askapp.cloudhos.net/wechat/doctorbind',
 							formData,
 							'form',
 							{},
