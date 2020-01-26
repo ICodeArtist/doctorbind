@@ -9,7 +9,25 @@
 				}
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/person/person",
+            "style" : {
+				"navigationBarTitleText": "阿斯克医生",
+				"app-plus":{
+					"titleNView":false
+				}
+			}
+        }
+        ,{
+            "path" : "pages/answer/answer",
+            "style" : {
+				"navigationBarTitleText": "阿斯克医生",
+				"app-plus":{
+					"titleNView":false
+				}
+			}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "阿斯克医生",
