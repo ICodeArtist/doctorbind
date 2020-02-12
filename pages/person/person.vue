@@ -13,11 +13,20 @@
 			</view>
 			<view class="ucenter-line"></view>
 			<view class="grace-list grace-margin-top">
+				<navigator url="../cashaccount/cashaccount" class="grace-list-items">
+					<text class="grace-list-icon grace-icons icon-menu grace-blue"></text>
+					<view class="grace-list-body grace-border-b">
+						<view class="grace-list-title">
+							<text class="grace-list-title-text">提现账号</text>
+						</view>
+					</view>
+					<text class="grace-list-arrow-right grace-icons icon-arrow-right"></text>
+				</navigator>
 				<navigator url="../income/income" class="grace-list-items">
 					<text class="grace-list-icon grace-icons icon-wallet grace-yellow"></text>
 					<view class="grace-list-body grace-border-b">
 						<view class="grace-list-title">
-							<text class="grace-list-title-text">我的收入(开发中)</text>
+							<text class="grace-list-title-text">我的收入</text>
 						</view>
 					</view>
 					<text class="grace-list-arrow-right grace-icons icon-arrow-right"></text>
