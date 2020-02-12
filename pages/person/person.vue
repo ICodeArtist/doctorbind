@@ -13,7 +13,7 @@
 			</view>
 			<view class="ucenter-line"></view>
 			<view class="grace-list grace-margin-top">
-				<view class="grace-list-items">
+				<navigator url="../income/income" class="grace-list-items">
 					<text class="grace-list-icon grace-icons icon-wallet grace-yellow"></text>
 					<view class="grace-list-body grace-border-b">
 						<view class="grace-list-title">
@@ -21,7 +21,7 @@
 						</view>
 					</view>
 					<text class="grace-list-arrow-right grace-icons icon-arrow-right"></text>
-				</view>
+				</navigator>
 				<navigator url="../answer/answer?type=1" class="grace-list-items">
 					<text class="grace-list-icon grace-icons icon-kf3 grace-red"></text>
 					<view class="grace-list-body grace-border-b">
