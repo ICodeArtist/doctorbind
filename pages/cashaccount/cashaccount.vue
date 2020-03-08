@@ -20,6 +20,13 @@
 					<input type="text" class="grace-form-input" name="blankcard" :value="blankcard"></input>
 				</view>
 			</view>
+			<view class="grace-form-item grace-border-b">
+				<graceCheckBtn :checked="val" :parameter="[]" @change="checkedChange" :size="46">
+					<text class="grace-text">
+						<a href="https://askapp.cloudhos.net/page/xy/yhsy.html">我同意并遵守结算规则协议</a>
+					</text>
+				</graceCheckBtn>
+			</view>
 			<view style="padding:22rpx 0;">
 				<button class="grace-button" style="line-height:80rpx;" formType="submit" type="primary">提交</button>
 			</view>
@@ -29,13 +36,15 @@
 </template>
 <script>
 import gracePage from "../../graceUI/components/gracePage.vue";
+import graceCheckBtn from "../../graceUI/components/graceCheckBtn.vue";
 var graceRequest = require("../../graceUI/jsTools/request.js");
 export default {
     data() {
         return {
 			blankname: '',
 			blankpart: '',
-			blankcard: ''
+			blankcard: '',
+			val: false
         }
     },
 	onShow() {
@@ -48,10 +57,17 @@ export default {
 		}
 	},
     methods:{
-		
 		// 表单提交及验证
 		formSubmit : function(e){
 			const _this = this
+			if(!this.val){
+				uni.showToast({
+					title: '请同意并遵守结算规则协议',
+					icon: 'none',
+					mask: true
+				});
+				return false;
+			}
 			var formData = e.detail.value;
 			formData.doctorid = uni.getStorageSync('doctorid');
 			graceRequest.post(
@@ -77,6 +93,9 @@ export default {
 				}
 			);
 		},
+		checkedChange(e) {
+			this.val = e[0];
+		},
 		getAccount(){
 			const _this = this
 			uni.showLoading({});
@@ -101,7 +120,7 @@ export default {
 		}
     },
 	components: {
-		gracePage
+		gracePage,graceCheckBtn
 	}
 }
 </script>
